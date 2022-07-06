@@ -1,0 +1,64 @@
+.main_box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: 60%;
+    margin: auto;
+}
+
+.hd4{
+    background-color: rgb(18, 36, 68);
+    width: 100%;
+    text-align: center;
+}
+
+.chat_box{
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
+    border-bottom: 1px solid gray;
+}
+
+.message{
+    border: 1px solid rgb(101, 136, 187);
+    border-radius: 10px;
+    padding: 10px;
+    width: max-content;
+    background-color: rgb(26, 75, 131);
+    color: rgb(43, 43, 43);
+    margin-left: 20px;
+}
+
+.send_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0px;
+}
+.send_box > input[type='text']{
+    width: 80%;
+    border: 1px solid rgb(42, 42, 42);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    outline: none;
+    padding-left: 15px;
+}
+
+.send_box > button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    background-color: rgb(42, 42, 42);
+    color: white;
+}
+.uname{
+    color: black;
+    font-weight: 700;
+}

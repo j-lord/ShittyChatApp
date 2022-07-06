@@ -1,0 +1,16 @@
+
+<link rel="stylesheet" href="{{ url_for('static', filename='message_box.css') }}">
+
+<div class="main_box">
+    <h4 class="hd4">Flask Real Time Chat App</h4>
+
+    <div class="chat_box">
+        {% for H in history %}
+        <p class="message"><span class="uname">{{H.user}} : </span>{{ H.message }}</p>
+        {% endfor %}
+    </div>
+    <div class="send_box">
+        <input type="text" id="my_message">
+        <button id="send_button" onclick="send_message()">Send</button>
+    </div>
+</div>

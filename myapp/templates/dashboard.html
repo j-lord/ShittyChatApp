@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<script src="{{ url_for('static', filename='chat.js') }}" ></script>
+
+{% include "sections/navbar.html" %}
+
+{% include "sections/message_box.html" %}
+
+{% endblock body %}
