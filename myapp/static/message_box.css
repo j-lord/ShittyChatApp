@@ -15,17 +15,17 @@
 .chat_box{
     display: flex;
     flex-direction: column;
-    max-height: 400px;
+    max-height: 500px;
     overflow-y: auto;
     border-bottom: 1px solid gray;
 }
 
 .message{
-    border: 1px solid rgb(101, 136, 187);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     padding: 10px;
     width: max-content;
-    background-color: rgb(26, 75, 131);
+    background-color: rgb(90, 186, 203);
     color: rgb(43, 43, 43);
     margin-left: 20px;
 }
@@ -37,8 +37,8 @@
     padding: 10px 0px;
 }
 .send_box > input[type='text']{
-    width: 80%;
-    border: 1px solid rgb(255, 255, 255);
+    width: 70%;
+    border: 1px solid rgb(0, 0, 0);
     border-top-right-radius: 0px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 0px;
@@ -59,6 +59,6 @@
     color: white;
 }
 .uname{
-    color: rgb(70, 70, 70);
+    color: rgb(36, 44, 37);
     font-weight: 700;
 }
