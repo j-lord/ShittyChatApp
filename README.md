@@ -11,12 +11,6 @@ Shitty Chat is a chat app that tries not to be shitty
 ```bash 
 sudo wget https://github.com/j-lord/ShittyChatApp.git
 ````
-- If you don't have wget installed, use curl. 
-```bash 
-curl -LOk https://github.com/j-lord/ShittyChatApp.git
-````
-...eventually you'll want to install [Homebrew](http://brew.sh) and [wget](http://stackoverflow.com/a/17094214).
-
 - Start application
 ```bash 
 python main.py 
