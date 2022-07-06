@@ -38,7 +38,7 @@
 }
 .send_box > input[type='text']{
     width: 80%;
-    border: 1px solid rgb(42, 42, 42);
+    border: 1px solid rgb(255, 255, 255);
     border-top-right-radius: 0px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 0px;
@@ -55,10 +55,10 @@
     border-top-left-radius: 0px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 0px;
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(28, 90, 123);
     color: white;
 }
 .uname{
-    color: black;
+    color: rgb(70, 70, 70);
     font-weight: 700;
 }
