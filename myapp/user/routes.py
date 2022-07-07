@@ -52,6 +52,7 @@ def register():
 @user.route("/dashboard")
 @login_required
 def dashboard():
+    # show last 100 messages - can always increase this
     history = History.query.order_by(desc(History.id)).limit(100).all()
     return render_template("dashboard.html", history=history)
 
