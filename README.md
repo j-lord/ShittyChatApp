@@ -24,7 +24,8 @@ python main.py
 http://127.0.0.1:5000
 ```
 - Go to web address
-- Upon first login, you will need to create a new account 
+- Upon first login, you will need to create a new account
+
 ![Screen Shot 2022-07-08 at 02 33 38](https://user-images.githubusercontent.com/16051733/177941212-0c505d07-01d1-423f-bcf3-efb84b167f55.png)
 
 
