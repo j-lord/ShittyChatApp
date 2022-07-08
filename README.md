@@ -25,7 +25,6 @@ http://127.0.0.1:5000
 ```
 - Go to web address
 Upon first login, you will need to create a new account 
-![Screen Shot 2022-07-05 at 22 49 10](https://user-images.githubusercontent.com/16051733/177464191-ee20d563-3079-4eae-b2be-b0e8d787317f.png)
 ![Screen Shot 2022-07-07 at 19 42 56](https://user-images.githubusercontent.com/16051733/177894080-110ab2b0-3746-4ee0-8c37-5265771509dc.png)
 
 - For testing purposes, create two separate logins 
