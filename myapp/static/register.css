@@ -10,7 +10,7 @@
     }
     
     .card-registration .select-input.form-control[readonly]:not([disabled]) {
-    background: #0c0b0a;
+    /* background: #8c6e50; */
     /* background: rgb(33, 37, 31); */
     font-size: 1rem;
     line-height: 2.15;

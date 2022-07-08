@@ -3,7 +3,7 @@ var socket = io();
 socket.on('connect', function() {
     console.log("chat")
     // mymessage = "I am logged in"
-    socket.emit('login_message', mymessage);
+    // socket.emit('login_message', mymessage);
 });
 
 // send message when user clicks send button
