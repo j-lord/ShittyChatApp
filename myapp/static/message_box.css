@@ -65,6 +65,8 @@
 .send_box > input[type='text']{
     width: 70%;
     border: 1px solid rgb(0, 0, 0);
+    background:rgb(34, 34, 34);
+    color:rgb(255, 255, 255);
     border-top-right-radius: 0px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 0px;
