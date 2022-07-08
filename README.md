@@ -9,8 +9,12 @@ Shitty Chat is a chat app that tries not to be shitty
 
 - Fork Repository
 ```bash 
-sudo wget https://github.com/j-lord/ShittyChatApp.git
+git clone https://github.com/j-lord/ShittyChatApp.git
 ````
+- cd into newly created directory
+```bash 
+cd ShittyChatApp 
+```
 - Start application
 ```bash 
 python main.py 
@@ -23,3 +27,5 @@ http://127.0.0.1:5000
 Upon first login, you will need to create a new account 
 ![Screen Shot 2022-07-05 at 22 49 10](https://user-images.githubusercontent.com/16051733/177464191-ee20d563-3079-4eae-b2be-b0e8d787317f.png)
 
+- For testing purposes, create two separate logins 
+Open window in one browser, open private window in another (Using the same browser can cause issues)
