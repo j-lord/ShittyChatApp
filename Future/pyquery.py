@@ -13,18 +13,17 @@ def create_connection(db_file):
         conn = sqlite3.connect(db_file)
     except Error as e:
         print(e)
-
     return conn
 
 
-def select_all_tasks(conn):
+def select_all_users(conn):
     """
     Query all rows in the tasks table
     :param conn: the Connection object
     :return:
     """
     cur = conn.cursor()
-    cur.execute("SELECT * FROM tasks")
+    cur.execute("SELECT * FROM user")
 
     rows = cur.fetchall()
 
@@ -32,15 +31,15 @@ def select_all_tasks(conn):
         print(row)
 
 
-def select_task_by_priority(conn, priority):
+def select_task_by_is_Client(conn, is_Client):
     """
-    Query tasks by priority
+    Query tasks by is_Client
     :param conn: the Connection object
-    :param priority:
+    :param is_Client:
     :return:
     """
     cur = conn.cursor()
-    cur.execute("SELECT * FROM tasks WHERE priority=?", (priority,))
+    cur.execute("SELECT * FROM user WHERE is_Client=?", (is_Client,))
 
     rows = cur.fetchall()
 
@@ -49,16 +48,16 @@ def select_task_by_priority(conn, priority):
 
 
 def main():
-    database = r"C:\sqlite\db\pythonsqlite.db"
+    database = r"myapp/database.db"
 
     # create a database connection
     conn = create_connection(database)
     with conn:
-        print("1. Query task by priority:")
-        select_task_by_priority(conn, 1)
+        print("1. Query task by is_Client:") # see if message is from client
+        select_task_by_is_Client(conn, 1)
 
-        print("2. Query all tasks")
-        select_all_tasks(conn)
+        # print("2. Query all tasks")
+        select_all_users(conn)
 
 
 if __name__ == '__main__':
