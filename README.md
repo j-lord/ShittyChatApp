@@ -23,9 +23,10 @@ python main.py
 ```bash 
 http://127.0.0.1:5000
 ```
-- Go to web address
-Upon first login, you will need to create a new account 
-![Screen Shot 2022-07-07 at 19 42 56](https://user-images.githubusercontent.com/16051733/177894080-110ab2b0-3746-4ee0-8c37-5265771509dc.png)
+- Upon first login, you will need to create a new account
+
+![Screen Shot 2022-07-08 at 02 33 38](https://user-images.githubusercontent.com/16051733/177941212-0c505d07-01d1-423f-bcf3-efb84b167f55.png)
+
 
 - For testing purposes, create two separate logins 
 Open window in one browser, open private window in another (Using the same browser can cause issues)
