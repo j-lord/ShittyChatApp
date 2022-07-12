@@ -1,7 +1,6 @@
 import sqlite3
 from sqlite3 import Error
 
-
 def create_connection(db_file):
     """ create a database connection to the SQLite database
         specified by the db_file
@@ -15,12 +14,11 @@ def create_connection(db_file):
         print(e)
     return conn
 
-
 def get_all_messages():
     """
     Query all rows in the history table
-    :param conn: the Connection object
-    :return:
+    :param None:
+    :return: Tuple of messages
     """
     database = r"myapp/database.db"
     # create a database connection
@@ -31,16 +29,12 @@ def get_all_messages():
 
     rows = cur.fetchall()
     return(rows)
-    # for row in rows:
-    #     print(row)
 
-# def get_all_users(conn, is_Client):
 def get_all_users():
     """
     Query users by is_Client
-    :param conn: the Connection object
-    :param is_Client:
-    :return:
+    :param None: 
+    :return: Tuple of users
     """
     database = r"myapp/database.db"
     # create a database connection
@@ -55,10 +49,9 @@ def get_all_users():
 
 def get_users_messages():
     """
-    Query users by is_Client
-    :param conn: the Connection object
-    :param is_Client:
-    :return:
+    Query all messages
+    :param None:
+    :return: Tuple of messages
     """
     database = r"myapp/database.db"
     # create a database connection

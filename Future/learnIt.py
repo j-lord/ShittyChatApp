@@ -1,4 +1,4 @@
-# simmple NLP
+# simple NLP
 import words as wd   # correct word templates
 import re
 
@@ -11,16 +11,17 @@ inputString = "I am just not sure about my portfolio, its up, its down. \nWho th
 
 systemInput = {"question": inputString,"history" : []} # datastructure for controlling that data
 
-def cleanText(inputString): 
+def cleanText(inputString):
+   
    #convert the input to lower case
    loweredInput = inputString.lower() 
    #remove all the characters that are not alphanumeric, or spaces
    cleanedInput = ""
    for character in loweredInput:
-      if(character.isalnum() or character == " "):     #Check alpha numeric or space
+      if(character.isalnum() or character == " "):   #Check alpha numeric or space
          cleanedInput += character
          #Then we add it to the cleaned input string, building it up character by character
-   else:       #If not skip
+   else:   #If not skip
          pass
    
    return cleanedInput
@@ -96,6 +97,6 @@ if extractedLogicalForm == None:
       print("We didn't find a match") #If we didn't find a match, say so
 else:
    targetSecurity = extractedLogicalForm[SECURITY]
-   descriptor     = extractedLogicalForm[SECURITY_ATTRIBUTE]
-   feeling        = extractedLogicalForm[FEELINGS]
-   print("\nThe outlook", "on", targetSecurity, "is {} - ".format(feeling),getAttributeValue(targetSecurity, descriptor, feeling))   
+   descriptor    = extractedLogicalForm[SECURITY_ATTRIBUTE]
+   feeling      = extractedLogicalForm[FEELINGS]
+   print("\nThe outlook", "on", targetSecurity, "is {} - ".format(feeling),getAttributeValue(targetSecurity, descriptor, feeling))  
