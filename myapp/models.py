@@ -14,6 +14,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(70))
     joining_date = db.Column(db.DateTime, default=datetime.now)
     password = db.Column(db.String(400))
+    is_Client = db.Column(db.String(400))
 
     def __repr__(self):
         return f"{self.username}, {self.email}"
@@ -23,6 +24,7 @@ class History(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user = db.Column(db.String(40))
     message = db.Column(db.String(400))
+    is_Client_Message = db.Column(db.String(400))
 
     def __repr__(self):
         return f"{self.user}, {self.message}"

@@ -1,18 +1,13 @@
 
 <link rel="stylesheet" href="{{ url_for('static', filename='message_box.css') }}">
 
-<section class="vh-100 gradient-custom">
+<section class="vh-300 gradient-custom">
     <div class="main_box">
-        
         <div class="chat_box">
-            {% for H in history %}
-            <p class="message"><span class="uname">{{H.user}} : </span>{{ H.message }}</p>
-            {% endfor %}
+                {% for H in history %}
+                <p class="message"><span class="uname">{{H.user}} : </span>{{ H.message }}</p>
+                {% endfor %}
         </div>
-    <!-- <div class="send_box">
-        <input type="text" id="my_message">
-        <button id="send_button" onclick="send_message()">Send</button>
-    </div> -->
         <div class="send_box">
             <input type="text" id="my_message">
             <button id="send_button" onclick="send_message()">Send</button>

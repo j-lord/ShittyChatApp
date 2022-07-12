@@ -64,6 +64,30 @@ def get_users_messages():
     rows = cur.fetchall()
     return(rows)
 
+def update_database():
+    database = r"myapp/database.db"
+    conn = create_connection(database)
+    cur = conn.cursor()
+    
+    sql_command = """UPDATE history
+    SET is_Client_Message = "NULL" WHERE id = 1
+    """
+    sql_command = """UPDATE history
+            SET is_Client_Message = (
+            SELECT is_Client 
+            FROM user
+            WHERE username = history.user);
+
+    """
+    cur.execute(sql_command)
+    conn.commit()
+    conn.close
+#     cur.execute("-- UPDATE history
+# --     SET is_Client_Message = (
+# --         SELECT is_Client 
+# --         FROM user
+# --         WHERE username = history.user);
+# ")
 
 def main():
     database = r"myapp/database.db"
