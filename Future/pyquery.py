@@ -16,24 +16,24 @@ def create_connection(db_file):
     return conn
 
 
-def select_all_users(conn):
+def get_all_messages(conn):
     """
-    Query all rows in the tasks table
+    Query all rows in the history table
     :param conn: the Connection object
     :return:
     """
     cur = conn.cursor()
-    cur.execute("SELECT * FROM user")
+    cur.execute("SELECT * FROM history")
 
     rows = cur.fetchall()
+    return(rows)
+    # for row in rows:
+    #     print(row)
 
-    for row in rows:
-        print(row)
 
-
-def select_task_by_is_Client(conn, is_Client):
+def get_all_users(conn, is_Client):
     """
-    Query tasks by is_Client
+    Query users by is_Client
     :param conn: the Connection object
     :param is_Client:
     :return:
@@ -42,23 +42,22 @@ def select_task_by_is_Client(conn, is_Client):
     cur.execute("SELECT * FROM user WHERE is_Client=?", (is_Client,))
 
     rows = cur.fetchall()
-
-    for row in rows:
-        print(row)
-
+    return(rows)
 
 def main():
     database = r"myapp/database.db"
-
     # create a database connection
     conn = create_connection(database)
+    
     with conn:
-        print("1. Query task by is_Client:") # see if message is from client
-        select_task_by_is_Client(conn, 1)
-
-        # print("2. Query all tasks")
-        select_all_users(conn)
-
-
+        # print("1. Show all users that are clients")
+        user_list = get_all_users(conn, 'True')
+        # print(user_list)
+        
+        # print("2. Query all client messages:")
+        messages_list = get_all_messages(conn)
+        # print(messages_list)
+        return user_list, messages_list
+        
 if __name__ == '__main__':
     main()
