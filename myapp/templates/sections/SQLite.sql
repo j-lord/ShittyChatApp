@@ -1,9 +1,9 @@
 -- classify every message as client message True/False
--- UPDATE history
---     SET is_Client_Message = (
---         SELECT is_Client 
---         FROM user
---         WHERE username = history.user);
+UPDATE history
+    SET is_Client_Message = (
+        SELECT is_Client 
+        FROM user
+        WHERE username = history.user);
 
 -- UPDATE history
 --     SET is_Client_Message = NULL WHERE id > 0;
@@ -14,9 +14,9 @@
 -- ORDER BY id DESC;
 
 -- Clear out all messages 
-    -- DELETE FROM history
-    -- WHERE id > 0;
-    -- SELECT * from user;
+    DELETE FROM history
+    WHERE id > 0;
+    SELECT * from user;
 
 -- UPDATE user SET is_Client = "False" WHERE id = 1;
 -- SELECT username FROM user WHERE is_Client = "True";
