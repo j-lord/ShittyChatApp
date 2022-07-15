@@ -119,3 +119,4 @@ else:
     descriptor = extractedLogicalForm[SECURITY_ATTRIBUTE]
     feeling = extractedLogicalForm[FEELINGS]
     print("\nThe outlook", "on", targetSecurity, "is {} - ".format(feeling), getAttributeValue(targetSecurity, descriptor, feeling))   
+
