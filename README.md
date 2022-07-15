@@ -15,10 +15,20 @@ git clone https://github.com/j-lord/ShittyChatApp.git
 ```bash 
 cd ShittyChatApp 
 ```
-- Start application
-```bash 
+- Windows Install Libs 
+```bash
+py -m pip install -r requirements.txt
+```
+- Start application Linux Unix 
+```bash
 python main.py 
 ```
+
+- Start Application Windows
+```
+py .\main.py
+```
+
 - Go to web address
 ```bash 
 http://127.0.0.1:5000
