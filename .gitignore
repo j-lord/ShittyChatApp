@@ -1,3 +1,8 @@
 *.db
 *.pyc
 myapp/database.db
+.vscode/dryrun.log
+.vscode/targets.log
+main.spec
+.vscode/configurationCache.log
+dist/main.exe
