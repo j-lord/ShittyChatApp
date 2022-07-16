@@ -7,10 +7,13 @@ import getMessage as gm
 SECURITY = 0
 SECURITY_ATTRIBUTE = 1
 FEELINGS = 2
+messages = []
 message = (gm.update()) # updates database and returns client message
-print("message: {}".format(message))
+for i in message: messages.append(str(i)) # need to use str here to convert from unicode 
+# print("message: {}".format(messages))
 
-inputString = (str(message))
+
+inputString = messages
 # inputString = "I am just not sure about my portfolio, its up, its down. \nWho the hell knows anything anymore. Aple seems to be looking fairly ugly at the moment! Wouldn't you agree?\n"  # The question that we want to answer
 # inputString = gm[0]  # The question that we want to answer
 # print("This should be the first client message: ".format(inputString))
@@ -22,7 +25,13 @@ systemInput = {"question": inputString, "history": []}  # datastructure for cont
 def cleanText(inputString):
     
     # convert the input to lower case
-    loweredInput = inputString.lower() 
+    loweredInput = []
+    for i in range (len(inputString)): inputString[i] = inputString[i].lower()
+    
+    # good here but need to check for numbers inside the list, not character by character 
+    # not unless this will always be only querying one line at a time, therefor there 
+    # would be no need for a list
+
     # remove all the characters that are not alphanumeric, or spaces
     cleanedInput = ""
     for character in loweredInput:
@@ -58,12 +67,12 @@ def spellCheckSecurity(word):
 
 # !!!!!!! Here we could use the Levenshtein distance algorithm for check spelling
 # https://en.wikipedia.org/wiki/Levenshtein_distance
-# But there may be no sence in re-creating the wheel when the nltk library exists 
+# But there may be no sence in re-creating the wheel when the nltk library exists
 
 
 def extractLogicalForm(inputString):
     # Next we are going to look through all the patterns that we have until we find one that matches a template
-    extractedLogicalForm = None
+    # extractedLogicalForm = None
     # For every regex pattern that we have
     for regex, logicalForm in wd.EXPRESSIONS:
         # convert pattern from a string to something python understands
@@ -95,11 +104,18 @@ def getAttributeValue(security, attribute, feeling):
          
 rawInputString = systemInput["question"]
 print("Original Input:", rawInputString)
+# rawInputString = rawInputString.encode('ascii',"ignore")
+# rawInputString = rawInputString.replace("u'", "'")
+# print("Original Input2:", str(rawInputString.encode('utf8')))
+print("Original Input2:", (rawInputString))
+
+
 
 cleanedInput = cleanText(rawInputString)
-# print("Cleaned: {}".format(cleanedInput))
+print("Cleaned: {}".format(cleanedInput))
 
 removedStop = removeStopWords(cleanedInput)
+print("Type: {}".format(type(removedStop)))
 print("Cleaned and stop words removed: {}".format(removedStop))
 removedStop = str(removedStop)
 spelled = cleanedInput
