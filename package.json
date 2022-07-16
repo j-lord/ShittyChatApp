@@ -1,0 +1,19 @@
+{
+  "name": "shittychatapp",
+  "version": "1.0.0",
+  "description": "Shitty Chat is a chat app that tries not to be shitty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashtonbradley45274/ShittyChatApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashtonbradley45274/ShittyChatApp/issues"
+  },
+  "homepage": "https://github.com/ashtonbradley45274/ShittyChatApp#readme"
+}
