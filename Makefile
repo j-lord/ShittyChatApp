@@ -1,4 +1,3 @@
-#PIP_LIBS=c:\users\ashton\appdata\local\programs\python\python310\lib\site-packages
 PIP_LIBS=./build
 all: install_deps clean build
 
