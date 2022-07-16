@@ -1,10 +1,10 @@
-PIP_LIBS=c:\users\ashton\appdata\local\programs\python\python310\lib\site-packages
-#PIP_LIBS=$(shell pip show pip | grep "Location" | awk -F 'Location:' '//{print $2}')
-
+#PIP_LIBS=c:\users\ashton\appdata\local\programs\python\python310\lib\site-packages
+PIP_LIBS=./build
 all: install_deps clean build
 
 install_deps:
-	pip install -r requirements.txt
+	mkdir -p ./build
+	pip install -r requirements.txt -t ./build
 build:
 	pyinstaller -p $(PIP_LIBS) \
 	-p myapp \
