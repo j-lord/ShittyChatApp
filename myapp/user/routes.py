@@ -1,6 +1,6 @@
 from flask import (Blueprint, request, render_template, redirect,url_for, flash)
 import flask
-from sqlalchemy import desc
+from sqlalchemy import asc
 from myapp.models import User, History
 from myapp import db
 from flask_login import (login_user, logout_user, login_required, current_user)
@@ -53,7 +53,7 @@ def register():
 @login_required
 def dashboard():
     # show last 100 messages - can always increase this
-    history = History.query.order_by(desc(History.id)).limit(100).all()
+    history = History.query.order_by(asc(History.id)).limit(100).all()
     return render_template("dashboard.html", history=history)
 
 @user.route("/logout")

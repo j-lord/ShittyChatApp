@@ -37,7 +37,7 @@
 -- RENAME COLUMN is_Clinet_Message TO is_Client_Message;
 -- ADD COLUMN is_Client;
 
--- SELECT * from user;
+SELECT * from user;
 
 SELECT * from history;
 -- ADD COLUMN is_Clinet boolean
