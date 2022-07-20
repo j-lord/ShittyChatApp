@@ -38,6 +38,5 @@
 -- ADD COLUMN is_Client;
 
 SELECT * from user;
-
 SELECT * from history;
 -- ADD COLUMN is_Clinet boolean
