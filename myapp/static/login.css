@@ -9,9 +9,7 @@
     background: linear-gradient(to bottom right, rgb(40, 42, 54), rgb(50, 53, 68))
     }
 
-    .style {
-        background: rgb(47, 50,  51);
-    }
+
 
     @media (min-width: 768px) {
     .gradient-form {
