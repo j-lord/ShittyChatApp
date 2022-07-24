@@ -23,24 +23,25 @@ systemInput = {"question": inputString, "history": []}  # datastructure for cont
 
 
 def cleanText(inputString):
-    
     # convert the input to lower case
-    loweredInput = []
     for i in range (len(inputString)): inputString[i] = inputString[i].lower()
-    
+    # print(inputString)
     # good here but need to check for numbers inside the list, not character by character 
     # not unless this will always be only querying one line at a time, therefor there 
     # would be no need for a list
 
     # remove all the characters that are not alphanumeric, or spaces
+    print("len: {}".format(len(inputString)))
     cleanedInput = ""
-    for character in loweredInput:
-        if(character.isalnum() or character == " "):  # Check alpha numeric or space
-            cleanedInput += character
+    for word in inputString:
+        for character in word:
+            if(character.isalnum() or character == " "):  # Check alpha numeric or space
+                cleanedInput += character
             # Then we add it to the cleaned input string, building it up character by character
-    else:  # If not skip
+        else:  # If not skip
             pass
-    
+    print("input {}".format(inputString))
+    print("clean: {}",format(cleanedInput))
     return cleanedInput
 
 
@@ -107,7 +108,7 @@ print("Original Input:", rawInputString)
 # rawInputString = rawInputString.encode('ascii',"ignore")
 # rawInputString = rawInputString.replace("u'", "'")
 # print("Original Input2:", str(rawInputString.encode('utf8')))
-print("Original Input2:", (rawInputString))
+# print("Original Input2:", (rawInputString))
 
 
 

@@ -26,8 +26,8 @@
 -- UPDATE history
 -- SET user = "John"
 -- WHERE id = 4;
-
 -- WHERE id = 1; 
+
 
 -- ALTER TABLE history
 -- -- RENAME COLUMN is_Clinet_Message TO is_Client_Message;
