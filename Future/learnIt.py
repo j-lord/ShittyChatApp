@@ -23,15 +23,13 @@ systemInput = {"question": inputString, "history": []}  # datastructure for cont
 
 
 def cleanText(inputString):
-    # convert the input to lower case
-    for i in range (len(inputString)): inputString[i] = inputString[i].lower()
+    # convert the input to lower case    for i in range (len(inputString)): inputString[i] = inputString[i].lower()
     # print(inputString)
     # good here but need to check for numbers inside the list, not character by character 
     # not unless this will always be only querying one line at a time, therefor there 
     # would be no need for a list
 
     # remove all the characters that are not alphanumeric, or spaces
-    print("len: {}".format(len(inputString)))
     cleanedInput = ""
     for word in inputString:
         for character in word:
@@ -39,9 +37,9 @@ def cleanText(inputString):
                 cleanedInput += character
             # Then we add it to the cleaned input string, building it up character by character
         else:  # If not skip
+            cleanedInput += " "
             pass
-    print("input {}".format(inputString))
-    print("clean: {}",format(cleanedInput))
+    # print("input: {}".format(inputString))
     return cleanedInput
 
 
@@ -73,7 +71,6 @@ def spellCheckSecurity(word):
 
 def extractLogicalForm(inputString):
     # Next we are going to look through all the patterns that we have until we find one that matches a template
-    # extractedLogicalForm = None
     # For every regex pattern that we have
     for regex, logicalForm in wd.EXPRESSIONS:
         # convert pattern from a string to something python understands
@@ -101,23 +98,18 @@ def getAttributeValue(security, attribute, feeling):
             return None
     else: 
         raise Exception("There was an error parsing the sentence, got: " + str(security) + ", " + str(attribute))
-
-         
+    
 rawInputString = systemInput["question"]
-print("Original Input:", rawInputString)
-# rawInputString = rawInputString.encode('ascii',"ignore")
-# rawInputString = rawInputString.replace("u'", "'")
-# print("Original Input2:", str(rawInputString.encode('utf8')))
-# print("Original Input2:", (rawInputString))
-
+print("Original Input:({}) {}".format(len(rawInputString), rawInputString))
+print("len: {}".format(len(inputString)))
 
 
 cleanedInput = cleanText(rawInputString)
 print("Cleaned: {}".format(cleanedInput))
 
 removedStop = removeStopWords(cleanedInput)
-print("Type: {}".format(type(removedStop)))
-print("Cleaned and stop words removed: {}".format(removedStop))
+# print("Type: {}".format(type(removedStop)))
+# print("Cleaned and stop words removed: {}".format(removedStop))
 removedStop = str(removedStop)
 spelled = cleanedInput
 
@@ -125,9 +117,9 @@ spelled = spellCheckSecurity(removedStop)
 if spelled != None:
     spelled = ' '.join(spellCheckSecurity(removedStop))
 else: 
-    spelled = cleanedInput
-    
+    spelled = cleanedInput 
 
+print("Spell chacked: {}".format(spelled))
 extractedLogicalForm = extractLogicalForm(spelled)
 if extractedLogicalForm == None:
         print("We didn't find a match")  # If we didn't find a match, say so
