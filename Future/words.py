@@ -1,4 +1,5 @@
 #Here we define the regular expression templates
+#Next we need to focus on working on the most imprortant part, making better templates
 
 EXPRESSIONS = [("what.*is.*apple.*",     ["apple", "outlook"]), 
 								("what.*about.*apple.*",  ["apple", "outlook"]),  
