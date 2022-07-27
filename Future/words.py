@@ -1,6 +1,6 @@
 #Here we define the regular expression templates
 #Next we need to focus on working on the most imprortant part, making better templates
-
+#Updated add more templates
 EXPRESSIONS = [("what.*is.*apple.*",     ["apple", "outlook"]), 
 								("what.*about.*apple.*",  ["apple", "outlook"]),  
 								("what.*good.*apple.*",   ["apple", "outlook"]),
