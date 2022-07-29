@@ -23,7 +23,7 @@
     }
 
 .main_box{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     padding-top: 80px;
     /* padding-bottom: 60px; */
@@ -35,6 +35,7 @@
 .chat_box{
     /* display: flex; */
     /* Fix the white box here! */
+    background-color: rgb(40, 42, 54);
     flex-direction: column;
     height: auto;
     max-height: 100vh;
