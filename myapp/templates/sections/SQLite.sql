@@ -4,6 +4,8 @@
 --         SELECT is_Client 
 --         FROM user
 --         WHERE username = history.user);
+-- this will need to be run after every message is added 
+-- to signal if the message if from the client or 
 
 -- UPDATE history
 --     SET is_Client_Message = NULL WHERE id > 0;

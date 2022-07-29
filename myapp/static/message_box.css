@@ -22,7 +22,7 @@
     }
     }
 
-.main_box{
+.main_box{ /* where the chat messages are displayed */
     /* display: flex; */
     flex-direction: column;
     padding-top: 80px;
