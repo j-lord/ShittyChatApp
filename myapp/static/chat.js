@@ -21,3 +21,7 @@ socket.on("global_message", function(msg){
                             <span class="uname">${$username} : </span>
                             ${$message}</p>`)
 });
+
+// after this is when you will call the learnIt.py script to run a query
+// on the messages that are posted. Could differentiate and only run this 
+// when its a client's message but should get both for now will use AJAX

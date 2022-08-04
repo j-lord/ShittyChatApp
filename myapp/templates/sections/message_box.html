@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="{{ url_for('static', filename='message_box.css') }}">
-
-<section class="vh-300 gradient-custom">
+<html style="background-color:rgb(40, 42, 54)">
+    <section class="vh-300 gradient-custom">
     <div class="main_box">
         <div class="chat_box">
                 {% for H in history %}
@@ -20,4 +20,5 @@
                 });
             </script>
         </div>
-</section>
+    </section>
+</html>
