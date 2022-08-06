@@ -16,9 +16,9 @@
 -- ORDER BY id DESC;
 
 -- Clear out all messages 
-    DELETE FROM history
-    WHERE id > 0;
-    SELECT * from user;
+--     DELETE FROM history
+--     WHERE id > 0;
+--     SELECT * from user;
 
 -- UPDATE user SET is_Client = "False" WHERE id = 1;
 -- SELECT username FROM user WHERE is_Client = "True";
@@ -42,3 +42,4 @@
 SELECT * from user;
 SELECT * from history;
 -- ADD COLUMN is_Clinet boolean
+

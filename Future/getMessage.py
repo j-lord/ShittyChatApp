@@ -11,7 +11,7 @@ def update():
     user_message_list = [list(message) for message in all_message]
     user_messages = []
     for i in user_message_list:
-        # print(i[2]) # print out all client messages
+        print(i[2]) # print out all client messages
         user_messages.append(i[2])
     return(user_messages)
     os._exit(100)

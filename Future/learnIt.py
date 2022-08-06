@@ -129,3 +129,5 @@ else:
     feeling = extractedLogicalForm[FEELINGS]
     print("\nThe outlook", "on", targetSecurity, "is {} - ".format(feeling), getAttributeValue(targetSecurity, descriptor, feeling))   
 
+# not sure how this is not finding a match - the phrase Apple good, 
+# Apple bad should be 2 unique matches 
