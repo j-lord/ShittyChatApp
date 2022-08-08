@@ -66,8 +66,6 @@ def spellCheckSecurity(word):
 
 # !!!!!!! Here we could use the Levenshtein distance algorithm for check spelling
 # https://en.wikipedia.org/wiki/Levenshtein_distance
-# But there may be no sence in re-creating the wheel when the nltk library exists
-
 
 def extractLogicalForm(inputString):
     # Next we are going to look through all the patterns that we have until we find one that matches a template
@@ -131,3 +129,4 @@ else:
 
 # not sure how this is not finding a match - the phrase Apple good, 
 # Apple bad should be 2 unique matches 
+# we need to figure out what is wrong with this
