@@ -22,6 +22,5 @@ socket.on("global_message", function(msg){
                             ${$message}</p>`)
 });
 
+
 // after this is when you will call the learnIt.py script to run a query
-// not sure is this is the best way to go about this
-// need to rethink how we are going to go about this one 
