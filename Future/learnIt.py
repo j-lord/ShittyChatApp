@@ -130,3 +130,4 @@ else:
 # not sure how this is not finding a match - the phrase Apple good, 
 # Apple bad should be 2 unique matches 
 # As of now there are no matches for the phrase Apple bad
+# need to figure out what is going on here 
