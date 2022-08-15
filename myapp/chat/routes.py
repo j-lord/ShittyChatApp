@@ -8,13 +8,13 @@ from myapp.models import History
 from myapp import db
 
 
-chat = Blueprint('chat', __name__)
+chat = Blueprint("chat", __name__)
 
 @chat.route("/chat")
 def mychat():
     return "chat"
 
-@socketio.on('login_message')
+@socketio.on("login_message")
 def handle_message(data):
     print(data)
 
@@ -28,16 +28,16 @@ def global_message(json):
 
 
 #  Add functionality so users know when new users join and leave chat 
-@socketio.on('join', namespace='/chat')
+@socketio.on("join", namespace="/chat")
 def join(message):
-    room = session.get('room')
+    room = db.session.get("room")
     join_room(room)
-    emit('status', {'msg':  session.get('username') + ' has entered the room.'}, room=room)
+    emit("status", {"msg": db.session.get("username") + " has entered the room."}, room=room)
 
-socketio.on('left', namespace='/chat')
+socketio.on("left", namespace="/chat")
 def left(message):
-    room = session.get('room')
-    username = session.get('username')
+    room = db.session.get("room")
+    username = db.session.get("username")
     leave_room(room)
-    session.clear()
-    emit('status', {'msg': username + ' has left the room.'}, room=room)
+    db.session.clear()
+    emit("status", {"msg": username + " has left the room."}, room=room)
