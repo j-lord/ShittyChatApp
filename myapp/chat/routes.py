@@ -41,3 +41,5 @@ def left(message):
     leave_room(room)
     db.session.clear()
     emit("status", {"msg": username + " has left the room."}, room=room)
+
+# Where will this message be posted Í
