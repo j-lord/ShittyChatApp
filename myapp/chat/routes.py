@@ -27,12 +27,14 @@ def global_message(json):
     emit("global_message", msg, broadcast=True, )
 
 
+# This part still isn't working
 #  Add functionality so users know when new users join and leave chat 
 @socketio.on("join", namespace="/chat")
 def join(message):
     room = db.session.get("room")
     join_room(room)
-    emit("status", {"msg": db.session.get("username") + " has entered the room."}, room=room)
+    msg = {"msg": message["username"] + " has joined the room."}
+    emit("join", msg, broadcast=True, )
 
 socketio.on("left", namespace="/chat")
 def left(message):
@@ -42,4 +44,4 @@ def left(message):
     db.session.clear()
     emit("status", {"msg": username + " has left the room."}, room=room)
 
-# Where will this message be posted Í
+# Where will this message be posted
