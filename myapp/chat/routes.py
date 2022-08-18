@@ -27,7 +27,7 @@ def global_message(json):
     emit("global_message", msg, broadcast=True, )
 
 
-# This part still isn't working
+# This part still isn't working why?
 #  Add functionality so users know when new users join and leave chat 
 @socketio.on("join", namespace="/chat")
 def join(message):
