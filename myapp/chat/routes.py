@@ -45,3 +45,5 @@ def left(message):
     emit("status", {"msg": username + " has left the room."}, room=room)
 
 # Where will this message be posted
+
+# invert binary tree
