@@ -25,3 +25,4 @@ socket.on("global_message", function(msg){
 
 // after this is when you will call the learnIt.py script to run a query
 // but the problem is that no matches are showing right now 
+// need to update this file to include the learnIt.py script
